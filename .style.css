@@ -1,0 +1,177 @@
+* {
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+:root {
+  /*     Base Colors */
+
+  /* Slate */
+  --color-50 : #f8fafc;
+  --color-100:  #f1f5f9;
+  --color-200:  #e2e8f0;
+  --color-300:  #cbd5e1;
+  --color-400:  #94a3b8;
+  --color-500:  #64748b;
+  --color-600:  #475569;
+  --color-700:  #334155;
+  --color-800:  #1e293b;
+  --color-900:  #0f172a;
+  --color-950:  #020617;
+
+  /* Amber */
+  /* --color-50 : #fffbeb;
+  --color-100 : #fef3c7;
+  --color-200 : #fde68a;
+  --color-300 : #fcd34d;
+  --color-400 : #fbbf24;
+  --color-500 : #f59e0b;
+  --color-600 : #d97706;
+  --color-700 : #b45309;
+  --color-800 : #92400e;
+  --color-900 : #78350f;
+  --color-950 : #451a03; */
+
+  /* Blue */
+  --color-50: #f0f9ff;
+  --color-100: #e0f2fe;
+  --color-200: #bae6fd;
+  --color-300: #7dd3fc;
+  --color-400: #38bdf8;
+  --color-500: #0ea5e9;
+  --color-600: #0284c7;
+  --color-700: #0369a1;
+  --color-800: #075985;
+  --color-900: #0c4a6e;
+  --color-950: #082f49;
+    
+  --headerBgColor: var(--color-900);
+  --headerTextColor: var(--color-500);
+  --tableAlternateBgColor: var(--color-100);
+}
+
+body {
+    font-family: "Tahoma", monospace;
+    letter-spacing: 0.75px;
+    font-size:14px;
+}
+
+h1 {
+  line-height: 2.25rem;
+  margin-bottom: 0;
+}
+p {
+  margin: .5rem 0 2rem;
+}
+
+/*--- TABLE ---*/
+#indexlist {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 1rem;
+    color: var(--color-500);
+    background-color: var(--color-50);
+    border-radius: 10px;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+    overflow:hidden;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  font-size:inherit;
+
+}
+
+td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+
+th {
+  padding: 0.5rem 1.5rem;
+  text-align: left;
+}
+
+th {
+    background-color: var(--headerBgColor); /* header background color */
+    color: #fff; /* header text color */
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+th a {
+    color: var(--headerTextColor);
+    text-decoration:none;
+}
+
+td a:not(:visited) {
+    color: #475569;
+}
+/* 
+td a:visited {
+    color: #c300ff;
+} */
+tr.indexbreakrow {
+    display:none;
+}
+
+tr {
+  padding: 0;
+}
+td {
+  vertical-align: middle;
+}
+tr:nth-child(even) td {
+  background-color: var(--tableAlternateBgColor);
+}
+@media screen and (max-width: 640px) {
+  thead, th {
+    display: none;
+  }
+  tr, td {
+    display: block;
+  }
+  tr {
+    border: 1px solid rgba(0, 0 , 0 ,.15);
+    margin-bottom: 2rem;
+  }
+  tr:last-child {
+    margin-bottom: 0;
+  }
+  tr:nth-child(even) td {
+    background-color: transparent;
+  }
+  td {
+    clear: both;
+    text-align: right;
+  }
+  td:before {
+    content: attr(data-label)': ';
+    float: left;
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+}
+
+.indexcolicon:has(img[alt]) {
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: 24px auto;
+}
+
+.indexcolicon:has(img[alt="[TXT]"]) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-file-earmark' viewBox='0 0 16 16'%3E%3Cpath d='M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z'/%3E%3C/svg%3E");
+}
+
+
+.indexcolicon:has(img[alt="[DIR]"]) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-folder2-open' viewBox='0 0 16 16'%3E%3Cpath d='M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v.64c.57.265.94.876.856 1.546l-.64 5.124A2.5 2.5 0 0 1 12.733 15H3.266a2.5 2.5 0 0 1-2.481-2.19l-.64-5.124A1.5 1.5 0 0 1 1 6.14V3.5zM2 6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5a.5.5 0 0 0-.5.5V6zm-.367 1a.5.5 0 0 0-.496.562l.64 5.124A1.5 1.5 0 0 0 3.266 14h9.468a1.5 1.5 0 0 0 1.489-1.314l.64-5.124A.5.5 0 0 0 14.367 7H1.633z'/%3E%3C/svg%3E");
+}
+
+img[alt="[TXT]"], img[alt="[DIR]"] {
+    display:none;
+}

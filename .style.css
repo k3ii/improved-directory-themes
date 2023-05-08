@@ -210,7 +210,8 @@ img[alt="[TXT]"], img[alt="[DIR]"] {
 .site-header .protocols {
   text-transform: uppercase;
   font-weight: bold;
-    
+  display: flex;
+  align-items: center;
 }
 
 .site-header a {

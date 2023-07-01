@@ -1,0 +1,12 @@
+/* curious-blue */
+  --color-50: #AADCF6;
+  --color-100: #98D5F4;
+  --color-200: #73C6F0;
+  --color-300: #4EB7EC;
+  --color-400: #29A8E7;
+  --color-500: #1793D1;
+  --color-600: #116F9E;
+  --color-700: #0C4C6C;
+  --color-800: #062839;
+  --color-900: #010507;
+  --color-950: #000000;

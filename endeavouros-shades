@@ -1,0 +1,12 @@
+  /* fuchsia-blue */
+  --color-50:  #DAC7ED;
+  --color-100: #D0B8E8;
+  --color-200: #BB99DE;
+  --color-300: #A77AD4;
+  --color-400: #925BCA;
+  --color-500: #7E3EBE;
+  --color-600: #623094;
+  --color-700: #462269;
+  --color-800: #2A153F;
+  --color-900: #0E0715;
+  --color-950: #000000;

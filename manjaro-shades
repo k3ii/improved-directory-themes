@@ -1,0 +1,12 @@
+/* shamrocka */
+  --color-50: #BEEDE4;
+  --color-100: #AFE9DD;
+  --color-200: #8FE0D0;
+  --color-300: #6FD7C3;
+  --color-400: #4FCEB5;
+  --color-500: #35BFA4;
+  --color-600: #29937E;
+  --color-700: #1D6759;
+  --color-800: #103B33;
+  --color-900: #040F0D;
+  --color-950: #000000;
